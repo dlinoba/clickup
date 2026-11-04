@@ -114,4 +114,4 @@ for lt in flat_lista_listas:
     print('picking up archived tasks')
     obj_task.get_task(lt[0],1)
 
-print('Finished')
+if __name__ == "__main__":
