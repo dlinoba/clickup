@@ -38,3 +38,4 @@ def insert_update(folder):
             session.execute(upd)
             session.commit()
     session.commit()
+    session.close()
