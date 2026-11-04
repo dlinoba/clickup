@@ -1,9 +1,6 @@
-#impot packages
 import sys
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP/DAO')
+from DAO import dao_list
 
-import dao_list
-import insert_banco as db
 
 class List:
     def __init__(self):
