@@ -3,7 +3,7 @@ from DAO import dao_space
 
 
 class Space:
-    def init(self):
+    def __init__(self):
         self.id = ""
         self.name = ""
 
