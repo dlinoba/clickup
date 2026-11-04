@@ -4,7 +4,7 @@ import config as cf
 import requests
 import insert_banco as db
 from datetime import datetime
-from DAO import dao_task as dao
+from DAO import dao_task
 import time
 
 #defining default values
