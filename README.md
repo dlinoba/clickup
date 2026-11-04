@@ -11,5 +11,5 @@ Python-based ETL pipeline for extracting, transforming, and storing ClickUp data
 7.MySQL Data Persistence: Uses Python classes and SQLAlchemy to structure and persist the extracted data in a MySQL database.<br>
 
 Architecture / Data Flow<br>
-The project follows an ETL architecture to extract data from the ClickUp REST API, process it using Python, and store it in a MySQL relational database.
+The project follows an ETL architecture to extract data from the ClickUp REST API, process it using Python, and store it in a MySQL relational database.<br>
 <img width="779" height="697" alt="diagrama_arquitetura" src="https://github.com/user-attachments/assets/e0e82514-fdd7-412d-b516-fdaf2287fcce" />
