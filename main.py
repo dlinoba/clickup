@@ -20,7 +20,7 @@ flat_lista_tasks = []
 #Build principal URL to begin the API call
 url = cf.root_url+'team/'+cf.Space+'/space'
  
-response = requests.get(url, headers=cf.headers)
+response = requests.get(url, headers=cf.headers,timeout=30)
  
 if (response.status_code == 200):
     
@@ -29,7 +29,7 @@ if (response.status_code == 200):
     #Call function that persists in DBMS and return the ID_Space list
     spaces = obj_space.read_space(retorno_space)
 else:
-    print('without connection')
+    response.raise_for_status()
 
 '''
 For each space ID saved in last step, will be call the next URL with ID parameter and will catch the list_id that don't have folders
@@ -46,7 +46,7 @@ for ls in spaces:
         #Call function that persists in DBMS and return the ID_list
         lista_sem_folder.append(obj_list.read_list(retorno_list_without_folder))
     else:
-        print('without connection')
+        response.raise_for_status()
 
 #Normalize tha list, because the return came list inside list
 for sublist in lista_sem_folder:
@@ -68,7 +68,7 @@ for fs in spaces:
         #Call function that persists in DBMS and return the ID_list
         lista_folder.append(obj_folder.read_folder(retorno_folder))
     else:
-        print('without connection')
+        response.raise_for_status()
 
 #Normalize tha list, because the return came list inside list
 for sublist in lista_folder:
@@ -90,7 +90,7 @@ for lf in flat_lista_folder:
         #Call function that persists in DBMS and return the ID_list
         lista_listas.append(obj_list.read_list(retorno_list))
     else:
-        print('without connection')
+        response.raise_for_status()
 
 #Normalize tha list, because the return came list inside list
 for sublist in lista_listas:
