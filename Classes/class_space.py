@@ -1,7 +1,4 @@
-#impot packages
-import insert_banco as db
 import sys
-
 from DAO import dao_space
 
 
