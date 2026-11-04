@@ -14,6 +14,7 @@ Architecture / Data Flow
 
 The project follows an ETL architecture to extract data from the ClickUp REST API, process it using Python, and store it in a MySQL relational database.
 
+(./diagrama_arquitetura.png)
 flowchart TD
     A[ClickUp REST API] --> B[Python Data Extraction]
     B --> C[Spaces, Folders and Lists]
