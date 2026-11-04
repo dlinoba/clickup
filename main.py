@@ -19,7 +19,9 @@ flat_lista_tasks = []
 
 #Build principal URL to begin the API call
 url = cf.root_url+'team/'+cf.Space+'/space'
- 
+
+spaces = []
+
 response = requests.get(url, headers=cf.headers,timeout=30)
  
 if (response.status_code == 200):
