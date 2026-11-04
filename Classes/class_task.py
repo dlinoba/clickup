@@ -130,6 +130,6 @@ class Task:
                         obj_task.read_task(retorno_list)
                         time.sleep(1)
                     else:
-                        print('without connection')
+                        response.raise_for_status()
         else:
-            print('without connection')
+            response.raise_for_status()
