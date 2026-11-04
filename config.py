@@ -15,9 +15,9 @@ root_url = 'https://api.clickup.com/api/v2/'
 Space = os.getenv('SPACE_TEAM')
 
 #Conexão banco
-host=os.environ["host"]
-user=os.environ["user"]
-password=os.environ["password"]
-banco =os.environ["database"]
+host=os.environ["HOST"]
+user=os.environ["USER"]
+password=os.environ["PASSWORD"]
+banco =os.environ["DATABASE"]
 
 conexao = create_engine("mysql+pymysql://"+user+":"+password+"@"+host+":3306/"+banco)
