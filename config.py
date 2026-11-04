@@ -20,4 +20,4 @@ user=os.environ["user"]
 password=os.environ["password"]
 banco =os.environ["database"]
 
-conexao = create_engine("mysql+pymysql://"+user+":"+password+"@"+host+":3306/"+banco,echo=True)
+conexao = create_engine("mysql+pymysql://"+user+":"+password+"@"+host+":3306/"+banco)
