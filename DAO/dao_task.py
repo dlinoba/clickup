@@ -43,10 +43,14 @@ def insert_update(task):
         session.add(task)
         session.commit()    
     else:
-        updated = session.query(Task.ID).filter(Task.ID == task.ID, Task.ID_LIST != task.ID_LIST, Task.ID_SPACE != task.ID_SPACE,\
-                                                Task.TASK_STATUS != task.TASK_STATUS, Task.DATA_ATUALIZACAO != task.DATA_ATUALIZACAO,\
-                                                Task.DATA_FECHAMENTO != task.DATA_FECHAMENTO, Task.ARQUIVADO != task.ARQUIVADO,\
-                                                ).first() is not None
+        updated = session.query(Task.ID).filter((Task.ID == task.ID) & (
+                                                                        (Task.ID_LIST != task.ID_LIST) |
+                                                                        (Task.ID_SPACE != task.ID_SPACE) |
+                                                                        (Task.TASK_STATUS != task.TASK_STATUS) |
+                                                                        (Task.DATA_ATUALIZACAO != task.DATA_ATUALIZACAO) |
+                                                                        (Task.DATA_FECHAMENTO != task.DATA_FECHAMENTO) |
+                                                                        (Task.ARQUIVADO != task.ARQUIVADO)
+                                                                        )).first() is not None
         #session.commit()
         if updated is True:
             upd =   update(Task).\
