@@ -10,31 +10,6 @@ Python-based ETL pipeline for extracting, transforming, and storing ClickUp data
 6.Task Extraction: Iterates through all retrieved Lists to collect both active and archived tasks, handling paginated API responses.<br>
 7.MySQL Data Persistence: Uses Python classes and SQLAlchemy to structure and persist the extracted data in a MySQL database.<br>
 
-Architecture / Data Flow
-
+Architecture / Data Flow<br>
 The project follows an ETL architecture to extract data from the ClickUp REST API, process it using Python, and store it in a MySQL relational database.
-
-(./diagrama_arquitetura.png)
-flowchart TD
-    A[ClickUp REST API] --> B[Python Data Extraction]
-    B --> C[Spaces, Folders and Lists]
-    C --> D[Task Extraction]
-    D --> E[Active and Archived Tasks]
-    E --> F[Data Processing with Python Classes]
-    F --> G[SQLAlchemy ORM]
-    G --> H[(MySQL Database)]
-
-    B -.-> I[Token Authentication]
-    D -.-> J[API Pagination]
-
-Main Components
-
-Source: ClickUp REST API.
-
-Extraction: Python and Requests.
-
-Processing: Python classes for data organization and mapping.
-
-ORM: SQLAlchemy for database operations.
-
-Destination: MySQL relational database.
+<img width="779" height="697" alt="diagrama_arquitetura" src="https://github.com/user-attachments/assets/e0e82514-fdd7-412d-b516-fdaf2287fcce" />
