@@ -1,5 +1,5 @@
 import os
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, URL
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -20,4 +20,6 @@ user=os.environ["USER"]
 password=os.environ["PASSWORD"]
 banco =os.environ["DATABASE"]
 
-conexao = create_engine("mysql+pymysql://"+user+":"+password+"@"+host+":3306/"+banco)
+url = URL.create("mysql+pymysql",username=user,password=password,host=host,port=3306,database=banco)
+
+conexao = create_engine(url)
