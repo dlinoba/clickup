@@ -38,3 +38,4 @@ def insert_update(space):
             session.execute(upd)
             session.commit()
     session.commit()
+    session.close()
