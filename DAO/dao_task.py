@@ -62,5 +62,6 @@ def insert_update(task):
             session.execute(upd)
             session.commit()
     session.commit()
+    session.close()
         
     
