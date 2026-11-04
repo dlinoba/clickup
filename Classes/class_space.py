@@ -1,9 +1,8 @@
 #impot packages
 import insert_banco as db
 import sys
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP/DAO')
 
-import dao_space
+from DAO import dao_space
 
 
 class Space:
