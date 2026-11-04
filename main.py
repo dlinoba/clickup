@@ -40,7 +40,7 @@ for ls in spaces:
 
     url_list_without_folder = cf.root_url+'space/'+ls[0]+'/list'
 
-    response = requests.get(url_list_without_folder, headers=cf.headers)
+    response = requests.get(url_list_without_folder, headers=cf.headers,timeout=30)
 
     if (response.status_code == 200):
         retorno_list_without_folder = response.json()
@@ -62,7 +62,7 @@ for fs in spaces:
 
     url_folder = cf.root_url+'/space/'+fs[0]+'/folder'
 
-    response = requests.get(url_folder, headers=cf.headers)
+    response = requests.get(url_folder, headers=cf.headers,timeout=30)
 
     if (response.status_code == 200):
         retorno_folder = response.json()
@@ -84,7 +84,7 @@ for lf in flat_lista_folder:
 
     url_list = cf.root_url+'folder/'+lf[0]+'/list'
 
-    response = requests.get(url_list, headers=cf.headers)
+    response = requests.get(url_list, headers=cf.headers,timeout=30)
 
     if (response.status_code == 200):
         retorno_list = response.json()
