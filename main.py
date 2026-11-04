@@ -36,7 +36,7 @@ For each space ID saved in last step, will be call the next URL with ID paramete
 '''
 for ls in spaces:
 
-    url_list_without_folder = cf.root_url+'/space/'+ls[0]+'/list'
+    url_list_without_folder = cf.root_url+'space/'+ls[0]+'/list'
 
     response = requests.get(url_list_without_folder, headers=cf.headers)
 
@@ -80,7 +80,7 @@ For each ID saved in folders list, will be call the next URL with ID parameter a
 '''
 for lf in flat_lista_folder:
 
-    url_list = cf.root_url+'/folder/'+lf[0]+'/list'
+    url_list = cf.root_url+'folder/'+lf[0]+'/list'
 
     response = requests.get(url_list, headers=cf.headers)
 
