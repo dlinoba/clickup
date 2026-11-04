@@ -1,9 +1,5 @@
 #impot packages
-import sys
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP/Classes')
 import config as cf
-from class_chamado import Task
-from class_responsavel import Responsavel
 from class_space import Space
 from class_list import List
 from class_folder import Folder
