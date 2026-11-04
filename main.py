@@ -60,7 +60,7 @@ For each ID saved in space list, will be call the next URL with ID parameter and
 '''
 for fs in spaces:
 
-    url_folder = cf.root_url+'/space/'+fs[0]+'/folder'
+    url_folder = cf.root_url+'space/'+fs[0]+'/folder'
 
     response = requests.get(url_folder, headers=cf.headers,timeout=30)
 
