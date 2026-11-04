@@ -1,12 +1,10 @@
 #impot packages
 import sys
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP')
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP/DAO')
 import config as cf
 import requests
 import insert_banco as db
 from datetime import datetime
-import dao_task
+from DAO import dao_task as dao
 import time
 
 #defining default values
