@@ -1,9 +1,9 @@
 #impot packages
 import config as cf
-from class_space import Space
-from class_list import List
-from class_folder import Folder
-from class_task import Task
+from Classes.class_space import Space
+from Classes.class_list import List
+from Classes.class_folder import Folder
+from Classes.class_task import Task
 from sqlalchemy import create_engine
 import requests
 
