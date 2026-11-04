@@ -1,15 +1,10 @@
-#impot packages
 import sys
-sys.path.insert(0, 'C:/PDI_PROEJTOS/API_CLICKUP/')
-
 import config
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String, update, and_
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import select
-
 
 engine = config.conexao
 
